@@ -9,7 +9,7 @@ if not os.path.exists(arquivo):
     print("Arquivo criado")
 
 while True:
-    nome = input("Digite o nome ou ENTER para encerrar: ").strip()
+    nome = input("Digite os dados ou ENTER para encerrar: ").strip()
     if nome == "":
         break
 
@@ -21,5 +21,6 @@ while True:
     updatedado.to_csv(arquivo, mode="a", header=False, index=False, encoding="utf-8")
 
     print("Salvo com sucesso!")
+
 
 
