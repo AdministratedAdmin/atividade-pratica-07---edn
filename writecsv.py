@@ -6,10 +6,10 @@ arquivo = "writenocsv.csv"
 if not os.path.exists(arquivo):
     df = pd.DataFrame(columns=["Nome", "Idade", "Cidade"])
     df.to_csv(arquivo, index=False, encoding="utf-8")
-    print("Arquivo criado com cabeçalho!")
+    print("Arquivo criado")
 
 while True:
-    nome = input("Digite o nome (ou ENTER para sair): ").strip()
+    nome = input("Digite o nome ou ENTER para encerrar: ").strip()
     if nome == "":
         break
 
@@ -20,5 +20,6 @@ while True:
 
     updatedado.to_csv(arquivo, mode="a", header=False, index=False, encoding="utf-8")
 
-    print("Salvos com sucesso!")
+    print("Salvo com sucesso!")
+
 
